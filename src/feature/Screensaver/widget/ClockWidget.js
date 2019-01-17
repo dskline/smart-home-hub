@@ -43,7 +43,7 @@ class BouncingClockWidget extends AbstractBouncingWidget {
         ...styles.widgetContainer
       }}>
         <Text style={{
-          color: '#fff',
+          color: '#ddd',
           fontSize: this.props.widgetHeight,
           fontFamily: 'sans-serif-light',
           fontWeight: 'bold'

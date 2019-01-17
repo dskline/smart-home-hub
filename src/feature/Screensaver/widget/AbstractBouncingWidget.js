@@ -26,15 +26,15 @@ export default class AbstractBouncingWidget extends React.Component<Props, State
   constructor (props: Props) {
     super(props)
     this.state = {
-      leftMax: props.containerWidth - props.widgetWidth,
-      topMax: props.containerHeight - props.widgetHeight,
+      leftMax: Math.floor(props.containerWidth - props.widgetWidth),
+      topMax: Math.floor(props.containerHeight - props.widgetHeight),
       ...defaultState
     }
   }
 
   static getDerivedStateFromProps (nextProps: Props, prevState: State) {
-    const leftMax = nextProps.containerWidth - nextProps.widgetWidth
-    const topMax = nextProps.containerHeight - nextProps.widgetHeight
+    const leftMax = Math.floor(nextProps.containerWidth - nextProps.widgetWidth)
+    const topMax = Math.floor(nextProps.containerHeight - nextProps.widgetHeight)
 
     if (prevState.left > leftMax || prevState.top > topMax) {
       return {
@@ -49,7 +49,7 @@ export default class AbstractBouncingWidget extends React.Component<Props, State
   componentDidMount (): void {
     setInterval(() => {
       this.updatePosition()
-    }, 800)
+    }, 500)
   }
 
   updatePosition = () => {

@@ -3,7 +3,7 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerNgrokUrl": "https://ja-h74.dskline.dskline-home-hub.exp.direct",
+  "packagerNgrokUrl": "https://packager.ja-h74.dskline.dskline-home-hub.exp.direct",
+  "ngrokPid": 3570
 }
