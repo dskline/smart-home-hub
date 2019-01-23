@@ -1,18 +1,19 @@
 {
   "name": "dskline-home-hub",
   "main": "node_modules/expo/AppEntry.js",
-  "private": true,
+  "version": "1.0.1",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "eject": "expo eject"
+    "android": "expo build:android",
+    "ios": "expo build:ios",
+    "link": "react-native link"
   },
   "dependencies": {
     "expo": "^31.0.0",
+    "expokit": "^31.0.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-native-immersive": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -32,6 +33,17 @@
     "eslint-plugin-standard": "^4.0.0",
     "flow": "^0.2.3",
     "flow-bin": "^0.89.0"
+  },
+  "release-it": {
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true,
+      "assets": [
+        "android/app/**/release/*.apk"
+      ]
+    }
   },
   "eslintConfig": {
     "parser": "babel-eslint",
