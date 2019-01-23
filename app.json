@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "dskline-home-hub",
+    "name": "Home Hub",
     "description": "A hobby app for managing home tasks.",
     "slug": "dskline-home-hub",
     "privacy": "public",
@@ -38,6 +38,7 @@
       "package": "tech.spencerkline.home",
       "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
       "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
-    }
+    },
+    "githubUrl": "https://github.com/dskline/smart-home-hub"
   }
 }
