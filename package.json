@@ -35,6 +35,9 @@
     "flow-bin": "^0.89.0"
   },
   "release-it": {
+    "npm": {
+      "publish": false
+    },
     "github": {
       "release": true,
       "assets": ["android/app/**/release/*.apk"]
