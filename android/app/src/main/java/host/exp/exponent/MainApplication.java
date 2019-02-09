@@ -10,6 +10,9 @@ import expolib_v1.okhttp3.OkHttpClient;
 
 // Needed for `react-native link`
 // import com.facebook.react.ReactApplication;
+import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
+import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
+import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
 import com.rnimmersive.RNImmersivePackage;
 
 public class MainApplication extends ExpoApplication {
@@ -27,6 +30,9 @@ public class MainApplication extends ExpoApplication {
 
         // Needed for `react-native link`
         // new MainReactPackage(),
+            new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+            new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+            new AppCenterReactNativePackage(MainApplication.this),
             new RNImmersivePackage()
     );
   }
