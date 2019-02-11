@@ -58,20 +58,27 @@ android {
       minSdkVersion 21
     }
   }
+  signingConfigs {
+    debug {
+      storeFile file('../keystores/debug.keystore')
+    }
+    release {
+      storeFile file('../keystores/release.keystore')
+      storePassword System.getenv('APPSIGNITURE')
+      keyAlias 'HOMEHUB'
+      keyPassword System.getenv('APPSIGNITURE')
+    }
+  }
   buildTypes {
     debug {
       debuggable true
       ext.enableCrashlytics = false
     }
     release {
+      signingConfig signingConfigs.release
       minifyEnabled true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
       zipAlignEnabled true
-    }
-  }
-  signingConfigs {
-    debug {
-      storeFile file('../debug.keystore')
     }
   }
   lintOptions {
