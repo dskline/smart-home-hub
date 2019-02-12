@@ -11,6 +11,15 @@ export default class Screensaver extends React.Component<void> {
 
   componentDidMount (): void {
     StatusBar.setHidden(true)
+    this.enterImmersiveMode()
+    Immersive.addImmersiveListener(this.enterImmersiveMode)
+  }
+
+  componentWillUnmount (): void {
+    Immersive.removeImmersiveListener(this.enterImmersiveMode)
+  }
+
+  enterImmersiveMode = () => {
     Immersive.on()
   }
 
