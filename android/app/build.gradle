@@ -59,27 +59,20 @@ android {
     }
   }
   signingConfigs {
-    debug {
-      storeFile file('../keystores/debug.keystore')
-    }
-    release {
-      storeFile file('../keystores/release.keystore')
-      storePassword System.getenv('APPSIGNITURE')
-      keyAlias 'HOMEHUB'
-      keyPassword System.getenv('APPSIGNITURE')
-    }
+      defaultConfig {
+          storeFile file('../keystores/release.keystore')
+          storePassword System.getenv('APPSIGNITURE')
+          keyAlias 'HOMEHUB'
+          keyPassword System.getenv('APPSIGNITURE')
+      }
   }
   buildTypes {
-    debug {
-      debuggable true
-      ext.enableCrashlytics = false
-    }
-    release {
-      signingConfig signingConfigs.release
-      minifyEnabled true
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      zipAlignEnabled true
-    }
+      defaultConfig {
+          signingConfig signingConfigs.defaultConfig
+          minifyEnabled true
+          proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+          zipAlignEnabled true
+      }
   }
   lintOptions {
     abortOnError false
@@ -105,6 +98,7 @@ dependencies {
     compile project(':appcenter-analytics')
     compile project(':appcenter')
     compile project(':react-native-immersive')
+
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   implementation 'com.android.support:multidex:1.0.1'
