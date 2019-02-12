@@ -1,5 +1,8 @@
 node_modules
 
+.expo
 android/.idea
 android/.gradle
 android/local.properties
+
+*.iml
