@@ -6,12 +6,13 @@ import com.facebook.react.ReactPackage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import expo.core.interfaces.Package;
 import host.exp.exponent.generated.DetachBuildConstants;
 import host.exp.exponent.experience.DetachActivity;
+
+import com.rnimmersive.RNImmersiveModule;
 
 public class MainActivity extends DetachActivity {
 
@@ -50,5 +51,14 @@ public class MainActivity extends DetachActivity {
   public Bundle initialProps(Bundle expBundle) {
     // Add extra initialProps here
     return expBundle;
+  }
+
+  @Override
+  public void onWindowFocusChanged(boolean hasFocus) {
+    super.onWindowFocusChanged(hasFocus);
+
+    if (hasFocus && RNImmersiveModule.getInstance() != null) {
+      RNImmersiveModule.getInstance().emitImmersiveStateChangeEvent();
+    }
   }
 }
