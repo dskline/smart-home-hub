@@ -118,6 +118,7 @@ dependencies {
 
   // Our dependencies
   implementation 'com.android.support:appcompat-v7:27.1.1'
+  implementation 'com.twofortyfouram:android-plugin-client-sdk-for-locale:4.0.3'
 
   // Our dependencies from ExpoView
   // DON'T ADD ANYTHING HERE THAT ISN'T IN EXPOVIEW. ONLY COPY THINGS FROM EXPOVIEW TO HERE.

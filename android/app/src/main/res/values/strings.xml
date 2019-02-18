@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">dskline-home-hub</string>
+  <string name="app_name">Home Hub</string>
   <string name="dev_activity_name">Exponent Dev</string>
   <string name="preference_file_key">host.exp.exponent.SharedPreferences</string>
   <string name="error_header">Something went wrong.</string>
@@ -11,4 +11,7 @@
   <string name="default_notification_channel_group">Default</string>
   <string name="persistent_notification_channel_name">Experience notifications</string>
   <string name="persistent_notification_channel_desc">Persistent notifications that provide debug info about open experiences</string>
+  <string name="tasker_plugin_name">Home Hub</string>
+  <string name="menu_discard_changes">Discard changes</string>
+  <string name="message_hint">Edit var</string>
 </resources>
