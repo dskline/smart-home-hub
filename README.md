@@ -6,4 +6,6 @@ It is built with [create-react-native-app](https://github.com/react-community/cr
 
 ### Current Features
 
-Screensaver with bouncing clock (prevents screen burn-in)
+[v1.0] - Screensaver with bouncing clock (prevents screen burn-in)
+
+[v1.1] - `Android Only` Invokable Tasker action to find tennis meetups within certain weather forecast criteria and respond via notification.
