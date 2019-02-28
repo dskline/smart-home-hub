@@ -94,7 +94,11 @@ android {
   packagingOptions {
     pickFirst "**"
   }
-  configurations.all {
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    configurations.all {
     resolutionStrategy.force 'com.android.support:design:27.1.0'
   }
 }
@@ -118,6 +122,9 @@ dependencies {
 
   // Our dependencies
   implementation 'com.android.support:appcompat-v7:27.1.1'
+  implementation 'com.twofortyfouram:android-plugin-client-sdk-for-locale:4.0.3'
+  implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+  implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
 
   // Our dependencies from ExpoView
   // DON'T ADD ANYTHING HERE THAT ISN'T IN EXPOVIEW. ONLY COPY THINGS FROM EXPOVIEW TO HERE.
