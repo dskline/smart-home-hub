@@ -94,7 +94,11 @@ android {
   packagingOptions {
     pickFirst "**"
   }
-  configurations.all {
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    configurations.all {
     resolutionStrategy.force 'com.android.support:design:27.1.0'
   }
 }
